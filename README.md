@@ -57,4 +57,4 @@ Project directory is organized as follows:
 
 3. **Output**
 
-The results will be written to the output.txt file located in the root directory of the project.
+     The results will be written to the output.txt file located in the root directory of the project.
