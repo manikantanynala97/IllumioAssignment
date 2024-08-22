@@ -53,7 +53,7 @@ Project directory is organized as follows:
 
 1. **Run the Java Program**
 
-     After compiling, navigate back to the root directory and run the program using the following command:
+     After compiling, navigate back to the `root` directory and run the program using the following command:
 
       ```
         java -cp bin FlowLogParser
