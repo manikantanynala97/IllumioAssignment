@@ -40,13 +40,18 @@ Project directory is organized as follows:
 
    Open a terminal in Visual Studio Code or any terminal application, and navigate to the `src` directory inside your project folder. Run the following command:
 
-     javac -d ../bin FlowLogParser.java
+    ```
+      javac -d ../bin FlowLogParser.java
+    ```
 
-2. **Run the Java Program**
+
+1. **Run the Java Program**
 
      After compiling, navigate back to the root directory and run the program using the following command:
 
-     java -cp bin FlowLogParser
+      ```
+        java -cp bin FlowLogParser
+      ```
 
      This command tells the Java Virtual Machine (JVM) to look for the FlowLogParser.class file in the bin directory and execute it.
 
