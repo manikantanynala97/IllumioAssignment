@@ -43,12 +43,12 @@ Project directory is organized as follows:
 
 ## Testing and Assumptions
 
-`General Test Cases`
+**General Test Cases**
 
 The program has been tested with various general scenarios, and the outputs were found to be correct, considering the assumptions.
 Edge Cases Considered
 
-`Additional Test Cases`
+**Additional Test Cases**
 
 `Empty Lookup Table:`
 If lookup.csv is empty, all entries in flow_logs.txt should be tagged as "Untagged."
