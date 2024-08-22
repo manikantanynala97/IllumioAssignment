@@ -48,6 +48,16 @@ Project directory is organized as follows:
 The program has been tested with various general scenarios, and the outputs were found to be correct, considering the assumptions.
 Edge Cases Considered
 
+**General Test Input**
+
+![lookupcsv](https://github.com/user-attachments/assets/7bf504c0-7c70-4234-bba8-7480a7b78668)
+![ppppppp](https://github.com/user-attachments/assets/5509f54a-0e6a-425b-8d83-1c86b619de18)
+
+**General Test Output**
+
+![outputtext](https://github.com/user-attachments/assets/357a2b42-59a8-433b-9224-c4b50267bd6a)
+
+
 **Additional Test Cases**
 
 `Empty Lookup Table:`
