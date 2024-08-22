@@ -6,13 +6,13 @@ The `FlowLogParser` is a Java application designed to parse VPC flow logs and cl
 
 ## Assumptions
 
-**- The program supports only the default flow log format (version 2).
+** - The program supports only the default flow log format (version 2).
 - The lookup table must be in CSV format with no headers.
 - The log file and lookup table must be named `flow_logs.txt` and `lookup.csv`, respectively.
 - The program does not support custom log formats.
 - Assuming the tagCount to be counted only according to the flow logs basically if the dstport,protocol key is found then basically count as tagged or else untagged
 - Assuming the port,portocol combination count to be taken only from the flow logs.
-- Assuming the port, portocol combination is between the dstport,protocol not srcport,protocol so basically I am taking it from parts[6] which is dstport and parts[7] which is protocol (you can see in the FlowLogParser.java and has taken the reference from the amazon flow log records -> https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html)**
+- Assuming the port, portocol combination is between the dstport,protocol not srcport,protocol so basically I am taking it from parts[6] which is dstport and parts[7] which is protocol (you can see in the FlowLogParser.java and has taken the reference from the amazon flow log records -> https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html).**
 
 ## Requirements
 
