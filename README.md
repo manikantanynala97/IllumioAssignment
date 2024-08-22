@@ -10,8 +10,9 @@ The `FlowLogParser` is a Java application designed to parse VPC flow logs and cl
 - The lookup table must be in CSV format with no headers.
 - The log file and lookup table must be named `flow_logs.txt` and `lookup.csv`, respectively.
 - The program does not support custom log formats.
-- Assuming the tagCount to be counted only according to the flow logs basically if the dstport,protocol key is found then basically count as tagged or else untagged.
-- Assuming the port, portocol combination is between the dstport,protocol not srcport,protocol so basically I am taking it from parts[6] which is dstport and parts[7] which is protocol (you can see in the FlowLogParser.java and taking the reference from the amazon flow log records) 
+- Assuming the tagCount to be counted only according to the flow logs basically if the dstport,protocol key is found then basically count as tagged or else untagged
+- Assuming the port,portocol combination count to be taken only from the flow logs.
+- Assuming the port, portocol combination is between the dstport,protocol not srcport,protocol so basically I am taking it from parts[6] which is dstport and parts[7] which is protocol (you can see in the FlowLogParser.java and has taken the reference from the amazon flow log records -> https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html) 
 
 ## Requirements
 
@@ -33,6 +34,11 @@ Project directory is organized as follows:
 ![screenshot1](https://github.com/user-attachments/assets/98def0e0-4840-4875-994d-ff3646cf6944)
 
 
+## Approach to the problem
+
+ ```
+The FlowLogParser program is basically a tool that crunches through network logs and makes sense of them. It starts by loading a lookup table that matches ports and protocols to specific tags. Then it goes through a big log file, line by line, figuring out what each network connection is about based on that lookup table. As it goes, it keeps track of how many times it sees each tag and each port-protocol combo. The clever part is how it uses hashmaps to do this counting super fast, even with huge log files. At the end, it spits out a neat report that shows you what kinds of network traffic you've got going on. The whole thing is set up to be pretty flexible - you can easily update the lookup table or tweak how it categorizes things without messing with the core code. It's a smart way to get a quick overview of network activity without drowning in details.
+```
 
 ## Compilation and Execution
 
