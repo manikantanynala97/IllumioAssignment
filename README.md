@@ -17,7 +17,7 @@ The `FlowLogParser` is a Java application designed to parse VPC flow logs and cl
 
 ## Requirements
 
-- Java Development Kit (JDK) 8 or later
+- Java Development Kit (JDK) 17 or later
 
 ## Files
 
