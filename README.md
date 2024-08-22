@@ -40,6 +40,26 @@ Project directory is organized as follows:
  `The FlowLogParser program is basically a tool that crunches through network logs and makes sense of them. It starts by loading a lookup table that matches ports and protocols to specific tags. Then it goes through a big log file, line by line, figuring out what each network connection is about based on that lookup table. As it goes, it keeps track of how many times it sees each tag and each port-protocol combo. The clever part is how it uses hashmaps to do this counting super fast, even with huge log files. At the end, it spits out a neat report that shows you what kinds of network traffic you've got going on. The whole thing is set up to be pretty flexible - you can easily update the lookup table or tweak how it categorizes things without messing with the core code. It's a smart way to get a quick overview of network activity without drowning in details.`
 
 
+## Testing and Assumptions
+
+`General Test Cases`
+
+The program has been tested with various general scenarios, and the outputs were found to be correct, considering the assumptions.
+Edge Cases Considered
+
+`Additional Test Cases`
+
+`Empty Lookup Table:`
+If lookup.csv is empty, all entries in flow_logs.txt should be tagged as "Untagged."
+
+`Empty Flow Log File:`
+If flow_logs.txt is empty, the output should consist only of headers with no additional data.
+
+`Different Protocols:`
+Logs with different protocols (e.g., ICMP, IGMP) were tested to ensure they are handled correctly by the program.
+
+
+
 ## Compilation and Execution
 
 1. **Compile the Java Program**
